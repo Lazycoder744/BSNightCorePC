@@ -55,21 +55,14 @@ namespace BSNightcore.HarmonyPatches
 
         public static void SetPitchSpeed(GameplayModifiersPanelController controller)
         {
-            if (!PluginConfig.Instance.EnableInMenu || AudioManagerHolder.Instance == null)
-                return;
+            if (AudioManagerHolder.Instance == null) return;
 
             var gameplayModifiers = _gameplayModifiersField.GetValue(controller) as GameplayModifiers;
             if (gameplayModifiers == null) return;
 
             float multiplier = gameplayModifiers.songSpeedMul;
-            
-            // If speed is slower and slower mode is disabled, don't apply the effect
-            if (multiplier < 1f && !PluginConfig.Instance.EnableInSlowerMode)
-            {
-                multiplier = 1f;
-            }
 
-            // Set the speed and disable pitch compensation
+            // Always set speed and disable pitch compensation
             AudioManagerHolder.Instance.musicSpeed = multiplier;
             AudioManagerHolder.Instance.musicPitch = 1f;
         }

@@ -7,11 +7,9 @@ A Beat Saber PC mod that **removes pitch compensation globally** so songs go *NI
 1. Place `BSNightCore.dll` into your Beat Saber `Plugins/` folder.  
 2. Launch Beat Saber.
 
-> There are no other dependencies other than BSIPA of course
-
 ## Compatibility
 
-- Tested and verified working on 1.40.8, not sure about other versions
+- Tested and verified working on 1.40.8, not sure about other versions.
 
 ## Usage
 
@@ -20,7 +18,7 @@ To change it back to normal, remove the mod from your `Plugins/` folder and rest
 
 ## Contributing
 
-Feel free to open issues or pull requests for code improvements, compatibility fixes, or feature additions. I don't know how to make a toggle switch or anything fancy like that so please help me :)
+Please contribute because I'm new to this and I need help ironing out the bugs!
 
 ## License
 

@@ -7,6 +7,8 @@
   "description": "BSNightCore ported to PC! Enjoy all speeds without compensation :)",
   "gameVersion": "1.40.8",
   "dependsOn": {
-    "BSIPA": "^4.3.0"
+    "BSIPA": "^4.3.0",
+    "BeatSaberMarkupLanguage": "^1.5.0",
+    "SiraUtil": "^3.0.0"
   }
 }

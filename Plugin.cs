@@ -3,6 +3,7 @@ using HarmonyLib;
 using IPA;
 using IPA.Config.Stores;
 using IPALogger = IPA.Logging.Logger;
+using SiraUtil.Zenject;
 
 namespace BSNightcore
 {
@@ -14,12 +15,13 @@ namespace BSNightcore
         internal static Harmony HarmonyInstance { get; private set; }
 
         [Init]
-        public Plugin(IPALogger logger, IPA.Config.Config config)
+        public Plugin(IPALogger logger, IPA.Config.Config config, Zenjector zenjector)
         {
             Instance = this;
             Log = logger;
             PluginConfig.Instance = config.Generated<PluginConfig>();
-            HarmonyInstance = new Harmony("com.github.bsnightcore");
+            HarmonyInstance = new Harmony("com.lazycoder744.bsnightcore");
+            zenjector.Install<BSNightcoreInstaller>(Location.Menu);
         }
 
         [OnStart]

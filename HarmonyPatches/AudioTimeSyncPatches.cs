@@ -14,14 +14,12 @@ namespace BSNightcore.HarmonyPatches
 
         public static void RemovePitchCompensation(AudioTimeSyncController controller)
         {
+            if (!PluginConfig.Instance.ModEnabled) return;
             if (_audioSourceField == null) return;
 
             var audioSource = _audioSourceField.GetValue(controller) as UnityEngine.AudioSource;
             if (audioSource != null)
             {
-                // Set pitch equal to timeScale to remove compensation
-                // If timeScale is 1.5x, pitch will be 1.5x (nightcore)
-                // If timeScale is 0.5x, pitch will be 0.5x (slowcore)
                 audioSource.pitch = controller.timeScale;
             }
         }

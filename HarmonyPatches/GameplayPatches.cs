@@ -15,7 +15,8 @@ namespace BSNightcore.HarmonyPatches
 
         static void Postfix(GameplayCoreInstaller __instance)
         {
-            // Always remove pitch compensation (Why was I checking before???)
+            if (!PluginConfig.Instance.ModEnabled) return;
+
             var audioManager = _audioManagerField.GetValue(__instance) as AudioManagerSO;
             if (audioManager != null)
             {

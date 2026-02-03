@@ -1,0 +1,8 @@
+<vertical child-control-height='false'>
+  <horizontal bg='panel-top' pad-left='10' pad-right='10' horizontal-fit='PreferredSize'>
+    <text text='BSNightCore Settings' align='Center' font-size='5'/>
+  </horizontal>
+  <vertical bg='round-rect-panel' pad-top='5' pad-bottom='5' pad-left='10' pad-right='10' spacing='2' vertical-fit='PreferredSize'>
+    <toggle-setting value='modEnabled' text='Enable Mod' apply-on-change='true' hover-hint='Enable or disable pitch changes globally'/>
+  </vertical>
+</vertical>

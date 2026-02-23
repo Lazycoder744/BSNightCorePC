@@ -20,8 +20,8 @@ Use the UI toggle in the Solo Mod's tab to disable and enable the mod.
 Please contribute because I'm new to this and I need help ironing out the bugs!
 
 ### Known issues
-[] Pitch compensation stays disabled after the toggle is disabled. Requires the user to click the speed modifier to OFF in order to remove the patch.
-[X] Pitch compensation does not work in Replays and in practice mode. 
+- [ ] Pitch compensation stays disabled after the toggle is disabled. Requires the user to click the speed modifier to OFF in order to remove the patch.
+- [x] Pitch compensation does not work in Replays and in practice mode. 
 
 ## License
 

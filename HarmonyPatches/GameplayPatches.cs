@@ -44,4 +44,15 @@ namespace BSNightcore.HarmonyPatches
             }
         }
     }
+
+    [HarmonyPatch(typeof(AudioManagerSO), "set_musicPitch")]
+    public class AudioManagerPitchPatch
+    {
+        static bool Prefix(ref float value)
+        {
+            if (!PluginConfig.Instance.ModEnabled) return true;
+            value = 1f;
+            return true;
+        }
+    }
 }
